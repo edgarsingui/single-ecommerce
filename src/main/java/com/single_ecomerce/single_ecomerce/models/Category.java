@@ -1,5 +1,5 @@
 package com.single_ecomerce.single_ecomerce.models;
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "categories")

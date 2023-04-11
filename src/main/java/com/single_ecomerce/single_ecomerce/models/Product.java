@@ -1,10 +1,14 @@
 package com.single_ecomerce.single_ecomerce.models;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+
+import java.io.Serializable;
 
 @Entity
 @Table(name = "products")
-public class Product {
+public class Product implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -56,7 +60,7 @@ public class Product {
         this.description = description;
     }
 
-    public void setImage (String image){ this.image = image; }
+    public void setImage (String image){ this.image = image;}
 
     public void setFeatured(boolean featured) { this.featured = featured; }
 
