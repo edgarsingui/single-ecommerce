@@ -5,5 +5,5 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface ProductRepository extends CrudRepository<Product,Long> {
-    List<Product> findByFeatured(Boolean featured);
+    List<Product> findTop5ByFeatured(Boolean featured);
 }
