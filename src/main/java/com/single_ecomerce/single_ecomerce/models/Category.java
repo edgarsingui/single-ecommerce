@@ -12,6 +12,9 @@ public class Category {
     @Column(name = "name")
     private String name;
 
+    private String slug;
+    private String image;
+
     // getters e setters
 
     public Long getId() {
@@ -29,4 +32,11 @@ public class Category {
     public void setName(String name) {
         this.name = name;
     }
+
+    public void setSlug(String slug){this.slug = slug;}
+    public String getSlug(){return slug;}
+
+    public void setImage(String image){this.image = image;}
+    public String getImage(){return image;}
+
 }
