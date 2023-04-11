@@ -16,6 +16,9 @@ public class Product {
 
     private Double price;
 
+    private String image;
+
+    private boolean featured;
     public Product() {
     }
 
@@ -37,6 +40,10 @@ public class Product {
         return name;
     }
 
+    public String getImage(){return  image;}
+
+    public boolean isFeatured(){return featured;}
+
     public void setName(String name) {
         this.name = name;
     }
@@ -48,6 +55,10 @@ public class Product {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public void setImage (String image){ this.image = image; }
+
+    public void setFeatured(boolean featured) { this.featured = featured; }
 
     public Double getPrice() {
         return price;
