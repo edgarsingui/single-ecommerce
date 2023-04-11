@@ -51,39 +51,20 @@
 <div class="site-section site-blocks-2">
     <div class="container">
         <div class="row">
-            <div class="col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0" data-aos="fade" data-aos-delay="">
+
+            <div class="col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0" data-aos="fade" data-aos-delay="" th:each="categoria : ${categorias}">
                 <a class="block-2-item" href="#">
                     <figure class="image">
-                        <img src="images/women.jpg" alt="" class="img-fluid">
+                        <img th:src="${categoria.image}" alt="" class="img-fluid">
                     </figure>
                     <div class="text">
                         <span class="text-uppercase">Categoria</span>
-                        <h3>Mulher</h3>
+                        <h3 th:text="${categoria.name}"></h3>
                     </div>
                 </a>
             </div>
-            <div class="col-sm-6 col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
-                <a class="block-2-item" href="#">
-                    <figure class="image">
-                        <img src="images/children.jpg" alt="" class="img-fluid">
-                    </figure>
-                    <div class="text">
-                        <span class="text-uppercase">Categoria</span>
-                        <h3>Infantil</h3>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
-                <a class="block-2-item" href="#">
-                    <figure class="image">
-                        <img src="images/men.jpg" alt="" class="img-fluid">
-                    </figure>
-                    <div class="text">
-                        <span class="text-uppercase">Categoria</span>
-                        <h3>Homem</h3>
-                    </div>
-                </a>
-            </div>
+
+
         </div>
     </div>
 </div>
