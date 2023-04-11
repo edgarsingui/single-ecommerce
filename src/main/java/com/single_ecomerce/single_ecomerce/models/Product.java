@@ -1,3 +1,5 @@
+package com.single_ecomerce.single_ecomerce.models;
+
 import javax.persistence.*;
 
 @Entity
