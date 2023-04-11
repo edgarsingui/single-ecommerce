@@ -15,7 +15,7 @@ public class HomeController {
     public String index(Model model){
         model.addAttribute("dir","home/index");
         model.addAttribute("title","Inicio");
-        Iterable<Product> products = productRepository.findAll();
+        Iterable<Product> products = productRepository.findByFeatured(true);
         model.addAttribute("produtos",products);
         return  "template";
     }
