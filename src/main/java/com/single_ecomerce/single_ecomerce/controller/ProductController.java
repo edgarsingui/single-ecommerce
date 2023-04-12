@@ -7,7 +7,10 @@ import com.single_ecomerce.single_ecomerce.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
 @Controller
 public class ProductController {
 
@@ -24,5 +27,13 @@ public class ProductController {
         Iterable<Category> categories = categoryRepository.findAll();
         model.addAttribute("categorias",categories);
         return  "template";
+    }
+
+    @RequestMapping(value = "/product/{slug}", method = RequestMethod.GET)
+    public String show(@PathVariable(value = "slug") String slug, Model model){
+        Product product = productRepository.findBySlug(slug);
+        model.addAttribute("dir","products/single");
+        model.addAttribute("title",product.getName());
+        return "template";
     }
 }
