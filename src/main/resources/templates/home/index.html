@@ -86,8 +86,8 @@
                                 <img src="images/shoe_1.jpg" alt="Image placeholder" class="img-fluid">
                             </figure>
                             <div class="block-4-text p-4">
-                                <h3><a href="#" th:text="${produto.name}"></a></h3>
-                                <p class="mb-0" th:text="${produto.description}"></p>
+                                <h3><a href="#" th:text="${produto.name}" th:href="@{/product/{slug}(slug=${produto.slug})}"></a></h3>
+                                <p class="mb-0" th:text="${#strings.abbreviate(produto.description,150)}"></p>
                                 <p class="text-primary font-weight-bold" th:text="${produto.price}"></p>
                             </div>
                         </div>
