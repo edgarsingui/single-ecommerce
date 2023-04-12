@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface ProductRepository extends CrudRepository<Product,Long> {
     List<Product> findTop5ByFeatured(Boolean featured);
+    Product findBySlug(String slug);
 }
