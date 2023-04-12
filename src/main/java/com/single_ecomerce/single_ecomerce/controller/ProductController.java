@@ -34,6 +34,7 @@ public class ProductController {
         Product product = productRepository.findBySlug(slug);
         model.addAttribute("dir","products/single");
         model.addAttribute("title",product.getName());
+        model.addAttribute("product",product);
         return "template";
     }
 }
