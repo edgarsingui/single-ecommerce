@@ -16,6 +16,8 @@ public class Product implements Serializable {
 
     private String name;
 
+    private String slug;
+
     private String description;
 
     private Double price;
@@ -58,6 +60,14 @@ public class Product implements Serializable {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getSlug() {
+        return slug;
+    }
+
+    public void setSlug(String slug) {
+        this.slug = slug;
     }
 
     public void setImage (String image){ this.image = image;}
